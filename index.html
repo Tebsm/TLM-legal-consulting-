@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rose Legal Consulting | Legal Clarity, Applied to Your Situation</title>
+<style>
+:root{
+  --peach:#F6E4D3;
+  --cream:#FFF8EF;
+  --rust:#C6572E;
+  --rust-dark:#A6431F;
+  --ink:#2B241E;
+  --muted:#6E6455;
+  --line:#E8DCC8;
+  --sage:#8FA98A;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Inter',Helvetica,Arial,sans-serif;background:#fff;color:var(--ink);line-height:1.65;}
+h1,h2,h3{font-weight:700;letter-spacing:-0.3px;}
+a{color:var(--rust);text-decoration:none;}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px;}
+
+header{padding:20px 0;background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:60;}
+header .wrap{display:flex;justify-content:space-between;align-items:center;}
+.logo{font-weight:800;font-size:20px;color:var(--ink);}
+.logo span{color:var(--rust);}
+nav a{margin-left:24px;font-size:13px;font-weight:700;color:var(--ink);text-transform:uppercase;letter-spacing:0.4px;}
+nav a:hover{color:var(--rust);}
+.nav-nukza{background:var(--peach);color:var(--rust-dark) !important;padding:8px 16px;border-radius:18px;}
+
+.hero{background:var(--peach);padding:64px 0;}
+.hero .wrap{display:grid;grid-template-columns:1.15fr 0.85fr;gap:44px;align-items:center;}
+.disclosure-pill{display:inline-block;background:#fff;border:1px solid var(--line);color:var(--rust-dark);font-size:12px;font-weight:700;padding:7px 14px;border-radius:20px;margin-bottom:18px;}
+.hero h1{font-size:40px;line-height:1.15;color:var(--ink);margin-bottom:16px;}
+.hero p.desc{font-size:15px;color:var(--muted);max-width:460px;margin-bottom:24px;}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;}
+.cta-btn{background:var(--rust);color:#fff;padding:13px 24px;border-radius:8px;font-weight:700;font-size:14px;}
+.cta-btn.ghost{background:transparent;color:var(--rust-dark);border:2px solid var(--rust-dark);}
+.hero-card{background:#fff;border-radius:14px;padding:26px;border:1px solid var(--line);}
+.hero-card h4{font-size:13px;text-transform:uppercase;letter-spacing:0.5px;color:var(--rust);margin-bottom:14px;}
+.hero-card ul{list-style:none;font-size:14px;color:var(--ink);}
+.hero-card li{padding:8px 0;border-bottom:1px solid #F0E8D8;}
+
+section{padding:64px 0;}
+.section-head{max-width:640px;margin-bottom:34px;}
+.section-head h2{font-size:28px;color:var(--ink);margin-bottom:10px;}
+.section-head p{font-size:14px;color:var(--muted);}
+
+.scope-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+.scope-card{border-radius:12px;padding:26px;border:1px solid var(--line);background:var(--cream);}
+.scope-card.yes{border-top:5px solid var(--sage);}
+.scope-card.no{border-top:5px solid var(--rust);}
+.scope-card h3{font-size:16px;margin-bottom:12px;}
+.scope-card ul{list-style:none;font-size:14px;color:var(--ink);}
+.scope-card li{padding:6px 0;border-bottom:1px solid #F0E8D8;}
+.scope-card li::before{content:"→ ";color:var(--rust);font-weight:700;}
+.judgment-note{background:var(--cream);border:1px dashed var(--rust);border-radius:10px;padding:22px;margin-top:22px;font-size:13px;color:var(--muted);}
+.judgment-note strong{color:var(--rust-dark);}
+
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.svc-card{background:var(--cream);border-radius:12px;padding:24px;border:1px solid var(--line);}
+.svc-card h3{font-size:16px;color:var(--ink);margin-bottom:8px;}
+.svc-card p{font-size:13px;color:var(--muted);margin-bottom:10px;}
+.svc-card .price{font-size:13px;font-weight:700;color:var(--rust);}
+
+.featured-writing{background:var(--peach);}
+.nukza-card-mini{background:#fff;border-radius:12px;padding:18px;border:1px solid var(--line);}
+.nukza-pill{display:inline-flex;align-items:center;gap:6px;background:var(--rust);color:#fff;padding:4px 10px;border-radius:14px;font-size:10px;font-weight:700;margin-bottom:10px;}
+.nukza-pill .dot{width:5px;height:5px;background:#fff;border-radius:50%;}
+.mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.nukza-card-mini h4{font-size:14px;color:var(--ink);margin-bottom:6px;}
+.nukza-card-mini p{font-size:12px;color:var(--muted);}
+.see-all{text-align:center;margin-top:26px;}
+
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.step .n{width:34px;height:34px;background:var(--rust);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:10px;font-size:14px;}
+.step h4{font-size:14px;color:var(--ink);margin-bottom:6px;}
+.step p{font-size:13px;color:var(--muted);}
+
+.contact-cta{background:var(--ink);color:#fff;text-align:center;padding:56px 0;}
+.contact-cta h2{margin-bottom:14px;}
+.contact-cta p{opacity:0.75;margin-bottom:22px;font-size:14px;}
+.contact-cta .cta-btn{background:var(--rust);}
+
+footer{background:#181209;color:#B8AC98;padding:36px 0;font-size:13px;}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:18px;}
+footer .fine{font-size:11px;opacity:0.6;margin-top:14px;max-width:680px;}
+
+@media (max-width:860px){
+  .hero .wrap,.scope-grid,.services-grid,.mini-grid,.process-steps{grid-template-columns:1fr;}
+  nav{display:none;}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="logo">Rose <span>Legal Consulting</span></div>
+    <nav>
+      <a href="#scope">Scope of Practice</a>
+      <a href="#services">Services</a>
+      <a href="#writing">Writing</a>
+      <a href="https://yourusername.github.io/nukza-site" class="nav-nukza">Read NUKZA →</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="disclosure-pill">Legal consultant — non-practising attorney, not a law firm</span>
+      <h1>Legal clarity, applied to your specific situation.</h1>
+      <p class="desc">Drafting, compliance advisory, and legal opinions grounded in South African law — from a legally trained researcher who writes NUKZA. Fixed fees, plain language, transparent scope.</p>
+      <div class="cta-row">
+        <a href="#contact" class="cta-btn">Book a Scope Call</a>
+        <a href="#scope" class="cta-btn ghost">See What's In Scope</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h4>How this is different</h4>
+      <ul>
+        <li>Fixed-fee quotes, confirmed before work starts</li>
+        <li>Plain-language deliverables, not dense legalese</li>
+        <li>Transparent about what's referred to admitted attorneys</li>
+        <li>Backed by public writing you can read first, on NUKZA</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="scope">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>What's in scope — and what isn't</h2>
+      <p>South Africa's Legal Practice Act reserves certain functions for admitted, practising attorneys and advocates. As a non-practising attorney working as a consultant, here's exactly where the line sits.</p>
+    </div>
+    <div class="scope-grid">
+      <div class="scope-card yes">
+        <h3>✅ What I do</h3>
+        <ul>
+          <li>Contract and policy drafting</li>
+          <li>Legal research memos and written opinions</li>
+          <li>POPIA / PAIA compliance advisory</li>
+          <li>NGO governance documents</li>
+          <li>Immigration and citizenship application support</li>
+          <li>Plain-language legal content for organisations</li>
+        </ul>
+      </div>
+      <div class="scope-card no">
+        <h3>🚫 What I refer out</h3>
+        <ul>
+          <li>Court representation and litigation</li>
+          <li>Conveyancing and notarial work</li>
+          <li>Criminal defence</li>
+          <li>Anything requiring an admitted attorney's right of appearance</li>
+        </ul>
+      </div>
+    </div>
+    <div class="judgment-note">
+      <strong>Why this is lawful:</strong> The Gauteng High Court confirmed in <em>Damons N.O. and Another v Bezuidenhout</em> (25 August 2025) that non-admitted legal consultants may lawfully draft documents, research, and give opinions for a fee. The Legal Practice Act reserves specific functions only — court appearance, conveyancing, notarial work — not advisory work generally.
+    </div>
+  </div>
+</section>
+
+<section id="services" style="background:var(--cream);">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Services, priced upfront</h2>
+      <p>Every engagement starts with a written, fixed quote — no hourly billing surprises.</p>
+    </div>
+    <div class="services-grid">
+      <div class="svc-card"><h3>Contract Drafting &amp; Review</h3><p>Service agreements, NDAs, employment contracts, lease reviews.</p><div class="price">From R1,500</div></div>
+      <div class="svc-card"><h3>POPIA / PAIA Compliance</h3><p>Policy drafting and compliance gap assessments for SMEs and NGOs.</p><div class="price">From R4,500</div></div>
+      <div class="svc-card"><h3>Legal Opinions</h3><p>Written opinions on regulatory, contractual or constitutional questions.</p><div class="price">From R2,800</div></div>
+      <div class="svc-card"><h3>Immigration Application Support</h3><p>Document preparation and process guidance for permits and citizenship (non-litigious).</p><div class="price">From R2,000</div></div>
+      <div class="svc-card"><h3>NGO Governance Documents</h3><p>Constitutions, MOIs, and board policy drafting.</p><div class="price">From R3,000</div></div>
+      <div class="svc-card"><h3>Fractional Advisory Retainer</h3><p>Ongoing monthly advisory hours for startups and small teams.</p><div class="price">From R3,800/month</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="writing" class="featured-writing">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Read the thinking behind the advice</h2>
+      <p>Every explainer on NUKZA is written with the same primary-source rigour applied to paid engagements here.</p>
+    </div>
+    <div class="mini-grid">
+      <div class="nukza-card-mini"><span class="nukza-pill"><span class="dot"></span>Immigration</span><h4>Can Home Affairs refuse your appeal without reasons?</h4><p>PAJA s.5 and the 90-day rule, explained.</p></div>
+      <div class="nukza-card-mini"><span class="nukza-pill"><span class="dot"></span>Compliance</span><h4>Does your NGO actually need a POPIA officer?</h4><p>The one-word test that decides it.</p></div>
+      <div class="nukza-card-mini"><span class="nukza-pill"><span class="dot"></span>Citizenship</span><h4>Losing citizenship by taking another passport</h4><p>What section 6 actually requires.</p></div>
+    </div>
+    <div class="see-all"><a href="https://yourusername.github.io/nukza-site">See the full NUKZA library →</a></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head"><h2>How an engagement works</h2></div>
+    <div class="process-steps">
+      <div class="step"><div class="n">1</div><h4>Scope call</h4><p>Free 15-minute call to confirm your matter is in scope.</p></div>
+      <div class="step"><div class="n">2</div><h4>Fixed quote</h4><p>Written quote within 24 hours.</p></div>
+      <div class="step"><div class="n">3</div><h4>Delivery</h4><p>Plain-language drafting, research or opinion, with explanatory notes.</p></div>
+      <div class="step"><div class="n">4</div><h4>Referral if needed</h4><p>Litigation matters handed to a vetted admitted-attorney panel.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="contact-cta" id="contact">
+  <div class="wrap">
+    <h2>Get clarity on your matter this week.</h2>
+    <p>Tell me what you need — I'll tell you honestly if it's in scope.</p>
+    <a href="#" class="cta-btn">Start a Scope Call</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div><strong>Rose Legal Consulting</strong><br>Centurion, Gauteng, South Africa</div>
+    <div>hello@roselegalconsulting.co.za<br>+27 12 000 0000</div>
+  </div>
+  <div class="wrap fine">Rose Legal Consulting is a legal advisory practice operated by a non-practising attorney. It is not a law firm and does not perform reserved legal services under the Legal Practice Act 28 of 2014. This is a design prototype.</div>
+</footer>
+</body>
+</html>
